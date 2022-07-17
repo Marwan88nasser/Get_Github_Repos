@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Repositories</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="vh-100">
+    <div class="repos-container w-100 min-vw-100 position-relative">
+      <h3 class="proj-title text-center py-2">Fetch Repositories</h3>
+      <div class="get-repos-control p-3">
+        <input
+          type="text"
+          id="repos-name"
+          class="repos-name border-0 rounded-pill"
+          placeholder="Github Username"
+        />
+        <button class="submit-repos border-0 rounded-pill text-white">
+          Get Repos
+        </button>
+      </div>
+      <div class="show-data">
+        <span>no data to show</span>
+      </div>
+    </div>
+    <script src="app.js"></script>
+    <!-- sweetalert2 -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

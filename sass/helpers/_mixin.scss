@@ -1,0 +1,55 @@
+// centering element by position & transform
+@mixin centring($x, $y) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate($x, $y);
+}
+
+// check of media screen
+@mixin breakpoint($point) {
+  @if $point == xsm {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if $point == sm {
+    @media (min-width: 576px) and (max-width: 768px) {
+      @content;
+    }
+  } @else if $point == md {
+    @media (min-width: 768px) and (max-width: 992px) {
+      @content;
+    }
+  } @else if $point == lg {
+    @media (min-width: 992px) and (max-width: 1200px) {
+      @content;
+    }
+  } @else if $point == xl {
+    @media (min-width: 1200px) and (max-width: 1400px) {
+      @content;
+    }
+  } @else if $point == xxl {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin set-space {
+  @content;
+}
+
+@mixin reset-outline {
+  outline: none;
+}
+
+@mixin placeholder-control($text-color) {
+  color: $text-color;
+  font-family: inherit;
+}

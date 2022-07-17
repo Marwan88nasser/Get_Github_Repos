@@ -1,0 +1,85 @@
+@import "./sass/variables/colors";
+@import "./sass/variables/spacing";
+@import "./sass/variables/transitions";
+@import "./sass/helpers/mixin";
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: $main_color;
+}
+
+.repos-container {
+  background-color: $main_color;
+  .proj-title {
+    background-color: $second_color;
+    padding: $reg_space;
+    color: $main_color;
+  }
+  .get-repos-control {
+    width: 100%;
+    max-width: 570px;
+    background-color: $third_color;
+    border-radius: $md_rounded;
+    margin: 30px auto;
+    @include flex-between;
+    @include breakpoint(xsm) {
+      max-width: 320px !important;
+    }
+
+    .repos-name {
+      width: 80%;
+      @include set-space {
+        padding: 10px;
+        margin-right: 7px;
+      }
+      @include reset-outline;
+      &::placeholder {
+        @include placeholder-control(#7d9d9c);
+      }
+      &:focus::placeholder {
+        transition: $main_tr;
+        opacity: 0;
+      }
+    }
+
+    .submit-repos {
+      transition: $second-tr;
+      background-color: $second_color;
+      @include reset-outline;
+      @include set-space {
+        padding: 10px 13px;
+      }
+      &:hover {
+        background-color: #a9c7c6;
+      }
+    }
+  }
+  .show-data {
+    width: 90%;
+    background-color: $third_color;
+    @include set-space {
+      padding: 20px;
+      margin: 20px auto 10px;
+    }
+    @include breakpoint(xsm) {
+      max-width: 320px !important;
+    }
+    .repo-info {
+      background-color: $main_color;
+      &:last-child {
+        margin: 0 !important;
+      }
+    }
+    .repo-stars {
+      background-color: $second_color;
+      transition: $second-tr;
+      @include set-space {
+        margin: 0 15px 0 auto;
+        padding: 6px;
+      }
+      &:hover {
+        background-color: #a9c7c6;
+      }
+    }
+  }
+}
